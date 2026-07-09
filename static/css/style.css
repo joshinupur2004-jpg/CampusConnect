@@ -1,0 +1,101 @@
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: #0075fe;
+    border-color: #0075fe;
+}
+
+.btn-primary:hover {
+    background-color: #005dc5;
+    border-color: #005dc5;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    border-bottom: 1px solid #f0f0f0;
+    background-color: white;
+}
+
+.list-group-item {
+    border-left: none;
+    border-right: none;
+}
+
+.rounded-circle {
+    object-fit: cover;
+}
+
+#chat-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+
+/* Animations */
+
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Navbar transition */
+
+.navbar {
+    transition: all 0.3s;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #65676b;
+}
+
+.nav-link:hover {
+    color: #0075fe;
+}
+
+.badge {
+    font-size: 0.7rem;
+}

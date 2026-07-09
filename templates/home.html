@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3 text-center">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold text-primary">Welcome to Campus Connect</h1>
+        <p class="col-md-8 fs-4 mx-auto">Connect with students, share knowledge, and collaborate on projects. The ultimate networking platform for your college.</p>
+        {% if not current_user.is_authenticated %}
+        <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg" type="button">Login</a>
+        <a href="{{ url_for('register') }}" class="btn btn-outline-primary btn-lg" type="button">Register</a>
+        {% else %}
+        <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg" type="button">Go to Dashboard</a>
+        {% endif %}
+    </div>
+</div>
+<div class="row align-items-md-stretch">
+    <div class="col-md-4">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+            <h2>Connect</h2>
+            <p>Find and connect with students from your college or other branches.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Chat</h2>
+            <p>Real-time messaging to discuss projects and ideas instantly.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="h-100 p-5 text-white bg-primary rounded-3">
+            <h2>Collaborate</h2>
+            <p>Form groups and work together on exciting projects.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
